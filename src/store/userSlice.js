@@ -49,6 +49,33 @@ export const userReducer = (state = initialState, action) => {
   }
 };
 
+export const signUpDetails = (details) => async (dispatch) => {
+  const { email, password } = details;
+  try {
+    await axios.post(`${URL}/signup`, {
+      email,
+      password,
+    });
+    dispatch(signUp(
+      {
+        name: email,
+        loggedIn: false,
+        userId: '',
+        signedUp: true,
+      },
+    ));
+  } catch (error) {
+    dispatch(signUp(
+      {
+        name: '',
+        loggedIn: false,
+        userId: '',
+        signedUp: 'error',
+      },
+    ));
+  }
+};
+
 export const signinDetails = (details) => async (dispatch) => {
   const { email, password } = details;
   try {

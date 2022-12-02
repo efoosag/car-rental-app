@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Login from './components/Login';
+import Signup from './components/Signup';
 import Houses from './components/Houses';
 import './App.css';
 
@@ -12,10 +13,11 @@ function App() {
   return (
     <div className="d-flex w-100">
       <Router>
-        {logIn.loggedIn ? <Navigation /> : '' }
+        {logIn.loggedIn ? <Navigation /> : ''}
         <div className="d-flex flex-grow-1 justify-content-center">
           <Routes>
             <Route path="/" element={<Houses />} />
+            <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/houses" element={<Houses />} />
           </Routes>

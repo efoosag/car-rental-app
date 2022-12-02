@@ -1,33 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { signinDetails } from '../store/userSlice';
+import { signUpDetails } from '../store/userSlice';
 
-function Login() {
+function Signup() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const state = useSelector((state) => state.user);
-  const { loggedIn } = state;
-  const [signIn, setSignIn] = useState(loggedIn);
+  const { signedUp } = state;
+  const [signUp, setSignUp] = useState(signedUp);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const loginUser = (e) => {
+  const signUpUser = (e) => {
     e.preventDefault();
     const user = {
       email,
       password,
     };
-    dispatch(signinDetails(user));
+    dispatch(signUpDetails(user));
     setEmail('');
     setPassword('');
   };
 
   useEffect(() => {
-    setSignIn(loggedIn);
-    if (signIn === true) {
-      navigate('/');
+    setSignUp(signedUp);
+    if (signUp === true) {
+      navigate('/login');
     }
-  }, [loggedIn, navigate, signIn, state]);
+  }, [navigate, signUp, signedUp]);
   return (
     <>
       <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -36,7 +36,7 @@ function Login() {
             <form
               className="space-y-6"
               method="POST"
-              onSubmit={loginUser}
+              onSubmit={signUpUser}
             >
               <div>
                 <label htmlFor="email">
@@ -62,12 +62,12 @@ function Login() {
                   />
                 </label>
               </div>
-              <button type="submit">Log In</button>
+              <button type="submit">Sign Up</button>
               <div className="text-center">
                 <p>
-                  New User?
+                  Existing User?
                   {' '}
-                  <a href="/signup">Register</a>
+                  <a href="login">Login</a>
                 </p>
               </div>
             </form>
@@ -78,4 +78,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Signup;
