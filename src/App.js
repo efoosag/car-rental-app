@@ -1,27 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
+import Login from './components/Login';
+import Houses from './components/Houses';
 import './App.css';
 
 function App() {
+  const state = useSelector((state) => state.user);
+  const logIn = JSON.parse(localStorage.getItem('user')) || state;
   return (
     <div className="d-flex w-100">
       <Router>
-        <Navigation />
-        {/* <div className="d-flex flex-grow-1 justify-content-center">
+        {logIn.loggedIn ? <Navigation /> : '' }
+        <div className="d-flex flex-grow-1 justify-content-center">
           <Routes>
-            <Route path="/" element={<Doctors />} />
-            <Route path="/doctors" element={<Doctors />} />
-            <Route path="/" element={<Doctors />} />
-            <Route path="/doctor" element={<Detail />} />
-            <Route path="/reserve_form" exact element={<ReserveForm />} />
-            <Route path="/reservation" exact element={<Reservations />} />
-            <Route path="/add_doctor" exact element={<DoctorForm />} />
-            <Route path="/delete_doctor" exact element={<DoctorDelete />} />
-            <Route path="/login" exact element={<Login />} />
-            <Route path="/signup" exact element={<Signup />} />
+            <Route path="/" element={<Houses />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/houses" element={<Houses />} />
           </Routes>
-        </div> */}
+        </div>
       </Router>
     </div>
 
