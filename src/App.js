@@ -16,7 +16,7 @@ function App() {
         {logIn.loggedIn ? <Navigation /> : ''}
         <div className="d-flex flex-grow-1 justify-content-center">
           <Routes>
-            <Route path="/" element={<Houses />} />
+            <Route path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/houses" element={<Houses />} />
