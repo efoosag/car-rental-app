@@ -1,0 +1,17 @@
+.cars {
+  height: 100vh;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+   
+}
+
+@media screen and (max-width: 720px) {
+  .cars {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+     
+  }
+}
+

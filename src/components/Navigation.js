@@ -9,37 +9,39 @@ function Navigation() {
   return (
     <nav>
       <div className="tot">
-        <a className="nav-link titl" href="/">House Rentals</a>
-        <div className="navi">
-          <ul className="list">
-            <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/houses">Houses</a>
-            </li>
-            <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/house_form">Add House</a>
-            </li>
-            <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/rent_house">Rent House</a>
-            </li>
-            <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/fovaurvite_house">By Favourite</a>
-            </li>
-            <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/remove_houses">Remove House</a>
-            </li>
-            <li>
-              <Link
-                to="/login"
-                className="menu-bars"
-                onClick={() => {
-                  dispatch(logout());
-                }}
-              >
-                Log out
-              </Link>
-            </li>
-          </ul>
+        <div>
+          <a className="nav-link titl" href="/">Car Rentals</a>
         </div>
+
+        <ul className="list">
+          <li className="nav-item ">
+            <a className="nav-link active" aria-current="page" href="/cars">Car</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="/car_form">Add Car</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="/rent_car">Rent Car</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="/fovaurvite_car">My Favourite</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="/remove_car">Remove Car</a>
+          </li>
+        </ul>
+        <div className="mt-5">
+          <Link
+            to="/login"
+            className="ps-5 mt-5"
+            onClick={() => {
+              dispatch(logout());
+            }}
+          >
+            Log Out
+          </Link>
+        </div>
+
       </div>
     </nav>
   );

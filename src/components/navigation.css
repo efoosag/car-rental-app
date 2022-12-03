@@ -1,7 +1,7 @@
 nav {
     height: 100vh;
-    width: 18%;
-    background-color: rgb(250, 243, 243);
+    width: 20%;
+    background-color: whitesmoke;
   }
   
   .navi {
@@ -34,10 +34,11 @@ nav {
   
   .nav-link {
     font-size: 20px;
+    color: black;
   }
   
   .nav-link:hover {
-    background-color: #97bf0f;
+    background-color: #fd7e14;
   }
   
   .navbar-brand {
@@ -46,21 +47,25 @@ nav {
 
   a {
     text-decoration: none;
+    text-transform: none;
   }
   
-  @media screen and (max-width: 912px) {
+  @media screen and (max-width: 720px) {
     nav {
-      height: 22vh;
+      
       position: fixed;
       top: 0;
-      width: 90%;
+      width: 50%;
+    }
+
+    .tot {
+      display: flex;
+      flex-direction: column;
     }
   
     .list {
-      height: 60px;
-      position: fixed;
-      top: 0;
       display: flex;
+      flex-direction: column;
       justify-content: flex-start;
     }
   }
