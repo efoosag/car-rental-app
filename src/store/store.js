@@ -7,12 +7,12 @@ import { userReducer } from './userSlice';
 const rootReducer = combineReducers({
 
   user: userReducer,
+  cars: carReducer,
 
 });
 
 const store = configureStore({
   reducer: rootReducer,
-  cars: carReducer,
 },
 applyMiddleware(thunk, logger));
 
