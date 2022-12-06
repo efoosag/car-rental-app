@@ -11,10 +11,12 @@ function App() {
   const state = useSelector((state) => state.user);
   const logIn = JSON.parse(localStorage.getItem('user')) || state;
   return (
-    <div className="d-flex w-100 nav">
+    <div className="nav">
       <Router>
-        {logIn.loggedIn ? <Navigation /> : ''}
-        <div className="d-flex flex-grow-1 justify-content-center">
+        <div>
+          {logIn.loggedIn ? <Navigation /> : ''}
+        </div>
+        <div className="nav-wholer">
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />

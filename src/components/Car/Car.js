@@ -1,6 +1,7 @@
 import React from 'react';
+import './Car.css';
 
-function Car(car) {
+function Car({ car }) {
 
     const {
         name, model, feature, photo,
@@ -12,6 +13,7 @@ function Car(car) {
           <img className="car-image" src={photo} alt={name} />
           <h3 className="car-name">{name}</h3>
           <h4 className="car-title">{model}</h4>
+          <h4 className="car-feature">{feature}</h4>
         </div>
       </>
   

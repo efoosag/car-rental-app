@@ -1,3 +1,9 @@
 .nav {
   display: flex;
+  width: 100vw;
 }
+
+.nav-wholer {
+    width: 100%;
+}
+
