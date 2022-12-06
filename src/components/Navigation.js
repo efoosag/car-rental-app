@@ -9,25 +9,25 @@ function Navigation() {
   return (
     <nav>
       <div className="tot">
-        <a className="nav-link titl" href="/">House Rentals</a>
+        <a className=" titl" href="/">Car Rentals</a>
         <div className="navi">
           <ul className="list">
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/houses">Houses</a>
+              <a className="nav-link active" aria-current="page" href="/cars">Cars List</a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/house_form">Add House</a>
+              <a className="nav-link active" aria-current="page" href="/car_form">Add Car</a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/rent_house">Rent House</a>
+              <a className="nav-link active" aria-current="page" href="/rent_car">Rent Cars</a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/fovaurvite_house">By Favourite</a>
+              <a className="nav-link active" aria-current="page" href="/fovaurvite_car">By Favourite</a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/remove_houses">Remove House</a>
+              <a className="nav-link active" aria-current="page" href="/remove_cars">Remove Car</a>
             </li>
-            <li>
+            <li className="log">
               <Link
                 to="/login"
                 className="menu-bars"

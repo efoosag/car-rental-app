@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
 nav {
     height: 100vh;
-    width: 18%;
-    background-color: rgb(250, 243, 243);
+    width: 20%;
+    background-color: rgb(250, 248, 248);
+  }
+
+  .tot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .navi {
@@ -15,29 +24,51 @@ nav {
   }
   
   .titl {
-    margin-top: 20px;
+    margin-top: 4rem;
     display: flex;
     justify-content: center;
     font-size: 40px;
-    color: #f0c508;
+    color: #97BF0F;
+    font-weight: 600;
+    font-family: Fasthand, cursive;
+  }
+  .titl:hover {
+    background-color: #97BF0F;
+    color: #fff;
+  }
+
+  .titl a {
+    font-size: 40px;
   }
   
   .container-flud {
     background-color: #fff;
   }
   
+  .nav-item {
+    margin-top: 23px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+  }
+
+  .nav-link {
+    font-size: 25px;
+    color: rgb(58, 56, 56);
+    margin-top: 25px;
+  }
   .list {
     list-style: none;
-    margin-top: 10%;
+    margin-top: 18%;
     width: 100%;    
   }
   
-  .nav-link {
-    font-size: 20px;
+  .list a {
+    gap: 10px;
   }
   
   .nav-link:hover {
-    background-color: #97bf0f;
+    background-color: #97BF0F;
+    color: #fff;
   }
   
   .navbar-brand {
@@ -46,6 +77,22 @@ nav {
 
   a {
     text-decoration: none;
+  }
+
+  .menu-bars {
+    margin-top: 50px;
+    font-size: 25px;
+    background-color: #97BF0F;
+    color: rgb(240, 236, 236);
+    border-radius: 10px;
+  }
+
+  .log {
+    margin-top: 30px;
+  }
+
+  .menu-bars:hover {
+    background-color: rgba(17, 5, 5, 0.418);
   }
   
   @media screen and (max-width: 912px) {
