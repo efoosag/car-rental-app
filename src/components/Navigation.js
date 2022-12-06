@@ -9,7 +9,7 @@ function Navigation() {
   return (
     <nav>
       <div className="tot">
-        <a className=" titl" href="/">Car Rentals</a>
+        <a className=" titl" href="/cars">Car Rentals</a>
         <div className="navi">
           <ul className="list">
             <li className="nav-item py-2">
