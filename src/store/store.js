@@ -1,6 +1,7 @@
 import { configureStore, combineReducers, applyMiddleware } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
+import carReducer from './car';
 import { userReducer } from './userSlice';
 
 const rootReducer = combineReducers({
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
 
 const store = configureStore({
   reducer: rootReducer,
+  cars: carReducer,
 },
 applyMiddleware(thunk, logger));
 
