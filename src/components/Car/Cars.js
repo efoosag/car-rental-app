@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCar } from '../../store/car';
 import Car from './Car';
-import './Cars.css';
+// import 'cars.css';
 
 function Cars() {
   const dispatch = useDispatch();
