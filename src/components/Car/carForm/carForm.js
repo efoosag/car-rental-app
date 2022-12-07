@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSelector } from 'react-router-dom';
 import { saveCar } from '../../../store/car';
-import './carForm.css'
+import './carForm.css';
 
 const AddCar = () => {
   const dispatch = useDispatch();
+  const state = useSelector((state) => state.user);
+  const { userId } = state;
 
   const navigate = useNavigate();
 
@@ -37,7 +39,7 @@ const AddCar = () => {
     model,
     feature,
     photo,
-    user_id:user.id,
+    user_id: userId,
   }));
 
   const submitCar = () => {
