@@ -6,6 +6,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import Cars from './components/Car/Cars';
 import './App.css';
+import AddCar from './components/Car/carForm/carForm';
 
 function App() {
   const state = useSelector((state) => state.user);
@@ -22,6 +23,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/cars" element={<Cars />} />
+            <Route path="/add_car" exact element={<AddCar />} />
           </Routes>
         </div>
       </Router>
