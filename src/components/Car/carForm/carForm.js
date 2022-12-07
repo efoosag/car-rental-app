@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { saveCar } from '../../../store/car';
 import './carForm.css'
 
 const AddCar = () => {
   const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  const gotToCars = () => {
+    navigate('/cars');
+  };
 
   const defaultFormFields = {
     name: '',
@@ -30,12 +37,13 @@ const AddCar = () => {
     model,
     feature,
     photo,
-    available: true,
+    user_id:user.id
   }));
 
   const submitCar = () => {
     createCar(name, model, feature, photo);
     resetFormFields();
+    gotToCars();
   };
 
   const handleChange = (event) => {

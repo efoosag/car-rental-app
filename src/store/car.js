@@ -36,7 +36,6 @@ export const saveCar = (car) => async (dispatch) => {
         model: car.model,
         photo: car.photo,
         feature: car.feature,
-        available: car.available,
         user_id: car.user_id,
       }),
       headers: {
