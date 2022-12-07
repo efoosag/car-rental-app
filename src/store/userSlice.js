@@ -111,7 +111,7 @@ export const signinDetails = (details) => async (dispatch) => {
     );
   }
 };
-
+ 
 export const logout = () => (dispatch) => {
   localStorage.removeItem('token');
   localStorage.removeItem('user');
