@@ -37,7 +37,7 @@ const AddCar = () => {
     model,
     feature,
     photo,
-    user_id:user.id
+    user_id:user.id,
   }));
 
   const submitCar = () => {
