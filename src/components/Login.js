@@ -25,7 +25,7 @@ function Login() {
   useEffect(() => {
     setSignIn(loggedIn);
     if (signIn === true) {
-      navigate('/houses');
+      navigate('/cars');
     }
   }, [loggedIn, navigate, signIn, state]);
   return (
