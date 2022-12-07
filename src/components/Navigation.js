@@ -16,13 +16,13 @@ function Navigation() {
               <a className="nav-link active" aria-current="page" href="/cars">Cars List</a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/car_form">Add Car</a>
+              <a className="nav-link active" aria-current="page" href="/add_car">Add Car</a>
             </li>
             <li className="nav-item py-2">
               <a className="nav-link active" aria-current="page" href="/rent_car">Rent Cars</a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/fovaurvite_car">By Favourite</a>
+              <a className="nav-link active" aria-current="page" href="/fovaurvite_car">My Favourite</a>
             </li>
             <li className="nav-item py-2">
               <a className="nav-link active" aria-current="page" href="/remove_cars">Remove Car</a>

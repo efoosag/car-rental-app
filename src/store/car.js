@@ -26,3 +26,28 @@ export const getCar = () => async (dispatch) => {
     payload: car,
   });
 };
+<<<<<<< HEAD
+=======
+
+export const saveCar = (car) => async (dispatch) => {
+  await fetch(url,
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        name: car.name,
+        model: car.model,
+        photo: car.photo,
+        feature: car.feature,
+        user_id: car.user_id,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+  dispatch({
+    type: POST_CARS,
+    payload: car,
+  });
+};
+>>>>>>> c399bff0837f9d3c7f38017466040915f427dd0f
