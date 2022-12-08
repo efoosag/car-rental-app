@@ -1,0 +1,37 @@
+.add-car-box {
+  margin: 80px 10%;
+  max-width: 800px;
+  width: 90%;
+  padding: 30px;
+  background-color: #98bf0c;
+  border-radius: 20px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.forms {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 10px;
+}
+
+input {
+  border-radius: 10px;
+  height: 40px;
+  border: none;
+}
+
+button {
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  color: #637c07;
+  font-size: 18px;
+}
