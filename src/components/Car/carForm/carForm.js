@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { saveCar } from '../../../store/car';
-import './carForm.css'
+import './carForm.css';
 
 const AddCar = () => {
   const dispatch = useDispatch();
@@ -37,7 +37,7 @@ const AddCar = () => {
     model,
     feature,
     photo,
-    user_id:user.id,
+
   }));
 
   const submitCar = () => {
