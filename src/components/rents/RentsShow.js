@@ -6,6 +6,7 @@ import {
   fetchRents,
 } from "../../store/rentsSlice";
 import { useEffect } from "react";
+import Rent from "./Rent";
 import "./RentsShow.css";
 
 import AddRentForm from "./AddRentForm";
@@ -24,22 +25,20 @@ const RentsShow = () => {
     }
   }, [rentsStatus, dispatch]);
 
-  const renderedRents = rents.map((rent, index) => (
-    <article key={index} className="rent">
-      <span>Car Brand</span> <h3> {rent.car_brand}</h3>
-      <span>Collection Date</span> <p> {rent.rentDate}</p>
-      <span>Number of Days</span>
-      <p> {rent.number_of_days}</p>
-      <span>City/Location</span>
-      <p> {rent.location}</p>
-    </article>
-  ));
+  let content;
+  if (rentsStatus === "loading") {
+    content = <p>"Loading..."</p>;
+  } else if (rentsStatus === "succeeded") {
+    content = rents.map((rent, index) => <Rent key={index} rent={rent} />);
+  } else if (rentsStatus === "failed") {
+    content = <p>{rentsError}</p>;
+  }
 
   return (
     <section className="section">
       <h2>Car Rents</h2>
       <AddRentForm />
-      {renderedRents}
+      {content}
     </section>
   );
 };

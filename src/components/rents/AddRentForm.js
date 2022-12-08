@@ -2,40 +2,47 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
 
-import { rentAdded } from "../../store/rentsSlice";
+import { addNewRent } from "../../store/rentsSlice";
 
 const AddRentForm = () => {
   // const userLoggedIn = useSelector((state) => state.user);
   // console.log(userLoggedIn);
 
   const dispatch = useDispatch();
+
   const [car_brand, setCar_brand] = useState("");
   const [userId, setUserId] = useState("");
-  const [rentDate, setRentDate] = useState("");
+  const [rent_date, setRentDate] = useState("");
   const [number_of_days, setNumber_of_days] = useState("");
   const [location, setLocation] = useState("");
+  const [addRequestStatus, setAddRequestStatus] = useState("idle");
 
   const onCar_brandChanged = (e) => setCar_brand(e.target.value);
   const onRentDateChanged = (e) => setRentDate(e.target.value);
   const onNumber_of_daysChanged = (e) => setNumber_of_days(e.target.value);
   const onLocationChanged = (e) => setLocation(e.target.value);
 
+  const canSave =
+    [car_brand, rent_date, number_of_days, location].every(Boolean) &&
+    addRequestStatus === "idle";
+
   const onCreateRent = () => {
-    if (car_brand && rentDate && number_of_days && location) {
-      dispatch(
-        rentAdded({
-          id: nanoid(),
-          userId,
-          car_brand,
-          rentDate,
-          number_of_days,
-          location,
-        })
-      );
-      setCar_brand("");
-      setRentDate("");
-      setNumber_of_days("");
-      setLocation("");
+    if (canSave) {
+      try {
+        setAddRequestStatus("pending");
+        dispatch(
+          addNewRent({ car_brand, rent_date, number_of_days, location })
+        ).unwrap();
+
+        setCar_brand("");
+        setRentDate("");
+        setNumber_of_days("");
+        setLocation("");
+      } catch (err) {
+        console.error("failed to save the rent", err);
+      } finally {
+        setAddRequestStatus("idle");
+      }
     }
   };
 
@@ -44,9 +51,10 @@ const AddRentForm = () => {
     if (loggedInUser) {
       const foundUser = JSON.parse(loggedInUser);
       // setUser(foundUser);
-      console.log(foundUser);
     }
   }, []);
+
+
 
   return (
     <section>
@@ -76,7 +84,7 @@ const AddRentForm = () => {
           type="date"
           id="rentDate"
           name="rentDate"
-          value={rentDate}
+          value={rent_date}
           placeholder="When to Pick up Rented Car?"
           onChange={onRentDateChanged}
         />

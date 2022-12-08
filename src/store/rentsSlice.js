@@ -18,6 +18,18 @@ export const fetchRents = createAsyncThunk("posts/fetchRents", async () => {
   }
 });
 
+export const addNewRent = createAsyncThunk(
+  "rents/addNewRent",
+  async (initialRent) => {
+    try {
+      const response = await axios.post(POST_URL, initialRent);
+      return response.data;
+    } catch (err) {
+      return err.message;
+    }
+  }
+);
+
 const rentsSlice = createSlice({
   name: "rents",
   initialState,
@@ -40,6 +52,10 @@ const rentsSlice = createSlice({
       .addCase(fetchRents.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.error.message;
+      })
+      .addCase(addNewRent.fulfilled, (state, action) => {
+        console.log(action.payload);
+        state.rents.push(action.payload);
       });
   },
 });
