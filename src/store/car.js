@@ -26,8 +26,6 @@ export const getCar = () => async (dispatch) => {
     payload: car,
   });
 };
-<<<<<<< HEAD
-=======
 
 export const saveCar = (car) => async (dispatch) => {
   await fetch(`${url}/add_car`,
@@ -50,4 +48,3 @@ export const saveCar = (car) => async (dispatch) => {
     payload: car,
   });
 };
->>>>>>> c399bff0837f9d3c7f38017466040915f427dd0f
