@@ -1,6 +1,8 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
+import './Car.css';
 
-function Car(car) {
+function Car({ car }) {
   const {
     name, model, feature, photo,
   } = car;
@@ -9,13 +11,17 @@ function Car(car) {
     <>
       <div className="car-box">
         <img className="car-image" src={photo} alt={name} />
-        <h3 className="car-name">{name}</h3>
         <h4 className="car-title">{model}</h4>
-        <h4 className="car-feature">{feature}</h4>
+        <p className="car-feature">{feature}</p>
+        <h3 className="car-name">{name}</h3>
       </div>
     </>
 
   );
 }
+
+Car.propTypes = {
+  car: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default Car;

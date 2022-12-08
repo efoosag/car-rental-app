@@ -24,7 +24,7 @@ function Cars() {
         <p className="dashes">----------------------------</p>
       </div>
       {
-        cars?.map((car) => (<Car key={car.id} car={{ car }} />))
+        cars?.map((car) => (<Car key={car.id} car={car} />))
       }
     </div>
   );
