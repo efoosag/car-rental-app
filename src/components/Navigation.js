@@ -9,62 +9,27 @@ function Navigation() {
   return (
     <nav>
       <div className="tot">
-        <a className="nav-link titl" href="/">
-          House Rentals
+        <a className=" titl" href="/cars">
+          Car Rentals
         </a>
-
-        <div className="navi">
+         <div className="navi">
           <ul className="list">
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/houses">
-                Houses
-              </a>
+              <a className="nav-link active" aria-current="page" href="/houses">Houses</a>
             </li>
             <li className="nav-item py-2">
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/house_form"
-              >
-                Add House
-              </a>
-            </li>
-
-            <li className="nav-item py-2">
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/rent_form"
-              >
-                Rent House
-              </a>
-            </li>
-
-            <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/rents">
-                My Rents
-              </a>
-            </li>
-
-            <li className="nav-item py-2">
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/fovaurvite_house"
-              >
-                By Favourite
-              </a>
+              <a className="nav-link active" aria-current="page" href="/add_car">Add Car</a>
             </li>
             <li className="nav-item py-2">
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/remove_houses"
-              >
-                Remove House
-              </a>
+              <a className="nav-link active" aria-current="page" href="/rent_house">Rent House</a>
             </li>
-            <li>
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/fovaurvite_car">My Favourite</a>
+            </li>
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/remove_cars">Remove Car</a>
+            </li>
+            <li className="log">
               <Link
                 to="/login"
                 className="menu-bars"
