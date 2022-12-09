@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { nanoid } from "@reduxjs/toolkit";
+import { signinDetails } from "../../store/userSlice";
 
 import { addNewRent } from "../../store/rentsSlice";
 
@@ -9,9 +9,12 @@ const AddRentForm = () => {
   // console.log(userLoggedIn);
 
   const dispatch = useDispatch();
+  // const state = useSelector((state) => state.user);
+  // const { userId } = state;
+  // console.log(userId);
 
   const [car_brand, setCar_brand] = useState("");
-  const [userId, setUserId] = useState("");
+  // const [userId, setUserId] = useState("");
   const [rent_date, setRentDate] = useState("");
   const [number_of_days, setNumber_of_days] = useState("");
   const [location, setLocation] = useState("");
@@ -31,7 +34,12 @@ const AddRentForm = () => {
       try {
         setAddRequestStatus("pending");
         dispatch(
-          addNewRent({ car_brand, rent_date, number_of_days, location })
+          addNewRent({
+            car_brand,
+            rent_date,
+            number_of_days,
+            location,
+          })
         ).unwrap();
 
         setCar_brand("");
@@ -45,15 +53,6 @@ const AddRentForm = () => {
       }
     }
   };
-
-  useEffect(() => {
-    const loggedInUser = localStorage.getItem("user");
-    if (loggedInUser) {
-      const foundUser = JSON.parse(loggedInUser);
-      // setUser(foundUser);
-    }
-  }, []);
-
 
 
   return (
