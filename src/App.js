@@ -7,6 +7,7 @@ import Signup from './components/Signup';
 import Cars from './components/Car/Cars';
 import './App.css';
 import AddCar from './components/Car/carForm/carForm';
+import CarRemoveList from './components/Car/CarRemoveList';
 
 function App() {
   const state = useSelector((state) => state.user);
@@ -24,6 +25,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/cars" element={<Cars />} />
             <Route path="/add_car" exact element={<AddCar />} />
+            <Route path="/remove_car" exact element={<CarRemoveList />} />
           </Routes>
         </div>
       </Router>
