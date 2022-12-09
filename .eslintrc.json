@@ -26,6 +26,7 @@
     "no-shadow": "off",
     // "quotes": ["error", "single"],
     "semi": ["error", "always"],
+    "camelcase": "off",
     "indent": ["error", 2],
     "no-multi-spaces": ["error"]
   },
