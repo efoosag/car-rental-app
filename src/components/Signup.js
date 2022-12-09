@@ -30,50 +30,6 @@ function Signup() {
   }, [navigate, signUp, signedUp]);
   return (
     <>
-      {/* <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 l">
-        <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-          <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-            <form
-              className="space-y-6"
-              method="POST"
-              onSubmit={signUpUser}
-            >
-              <div>
-                <label htmlFor="email">
-                  <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="Enter User Email..."
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="password">
-                  <input
-                    id="password"
-                    type="password"
-                    name="password"
-                    placeholder="Enter User Password..."
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
-                  />
-                </label>
-              </div>
-              <button type="submit">Sign Up</button>
-              <div className="text-center">
-                <p>
-                  Existing User?
-                  {' '}
-                  <a href="login">Login</a>
-                </p>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div> */}
       <div className="container-fluid h-100vh mt-5 mt-md-0">
         <div className="row d-flex justify-content-center align-items-center h-100 m-0">
           <div className="col-12 col-md-8">

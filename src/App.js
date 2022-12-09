@@ -14,8 +14,8 @@ function App() {
   return (
     <div className="nav">
       <Router>
-        <div>
-          {logIn.loggedIn ? <Navigation /> : ''}
+        <div className="nav-dir">
+          {logIn.loggedIn === true && <Navigation />}
         </div>
         <div className="nav-wholer">
           <Routes>

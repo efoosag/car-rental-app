@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCar } from '../../store/car';
 import Car from './Car';
-// import 'cars.css';
+// import './Cars.css';
 
 function Cars() {
   const dispatch = useDispatch();
@@ -23,9 +23,12 @@ function Cars() {
         <p className="car-paragraph">Please select a Cars</p>
         <p className="dashes">----------------------------</p>
       </div>
-      {
-        cars?.map((car) => (<Car key={car.id} car={car} />))
-      }
+      <div className="car-lists">
+        {
+          cars?.map((car) => (<Car key={car.id} car={car} />))
+        }
+      </div>
+
     </div>
   );
 }
