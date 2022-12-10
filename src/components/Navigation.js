@@ -15,19 +15,54 @@ function Navigation() {
         <div className="navi">
           <ul className="list">
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/houses">Houses</a>
+              <a className="nav-link active" aria-current="page" href="/houses">
+                Houses
+              </a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/add_car">Add Car</a>
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="/add_car"
+              >
+                Add Car
+              </a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/rent_house">Rent House</a>
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="/rent_form"
+              >
+                Rent Car
+              </a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/fovaurvite_car">My Favourite</a>
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="/rentals"
+              >
+                Show Rents
+              </a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/remove_cars">Remove Car</a>
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="/fovaurvite_car"
+              >
+                My Favourite
+              </a>
+            </li>
+            <li className="nav-item py-2">
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="/remove_cars"
+              >
+                Remove Car
+              </a>
             </li>
             <li className="log">
               <Link
