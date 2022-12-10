@@ -10,7 +10,7 @@ import AddCar from './components/Car/carForm/carForm';
 
 function App() {
   const state = useSelector((state) => state.user);
-  const logIn = JSON.parse(localStorage.getItem('user')) || state;
+  const logIn = JSON.parse(localStorage.getItem("user")) || state;
   return (
     <div className="nav">
       <Router>
@@ -28,7 +28,6 @@ function App() {
         </div>
       </Router>
     </div>
-
   );
 }
 
