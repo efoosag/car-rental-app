@@ -5,7 +5,7 @@ const POST_URL = "http://localhost:3000/api/v1/rentals";
 
 const initialState = {
   rents: [],
-  status: "idle", //"idle"   ||  "Loading" || "succeeded" || "fail"
+  status: "idle", // "idle"   ||  "Loading" || "succeeded" || "fail"
   error: null,
 };
 
@@ -27,26 +27,25 @@ export const addNewRent = createAsyncThunk(
     } catch (err) {
       return err.message;
     }
-  }
+  },
 );
 
 const rentsSlice = createSlice({
   name: "rents",
   initialState,
   reducers: {
-    rentAdded(state, action) {
-      state.rents.push(action.payload);
-    },
+    // rentAdded(state, action) {
+    //   state.rents.push(action.payload);
+    // },
   },
   extraReducers(builder) {
     builder
+      // eslint-disable-next-line no-unused-vars
       .addCase(fetchRents.pending, (state, action) => {
         state.status = "loading";
       })
       .addCase(fetchRents.fulfilled, (state, action) => {
         state.status = "succeeded";
-        // const loadedRents = action.payload;
-        // state.rents = state.rents.concat(loadedRents);
         state.rents = action.payload;
       })
       .addCase(fetchRents.rejected, (state, action) => {

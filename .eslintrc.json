@@ -27,6 +27,9 @@
     // "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "camelcase": "off",
+    "react/prop-types": "off",
+    "no-param-reassign": 0,
+    "react/no-unescaped-entities": 0,
     "indent": ["error", 2],
     "no-multi-spaces": ["error"]
   },

@@ -12,7 +12,7 @@ function Navigation() {
         <a className=" titl" href="/cars">
           Car Rentals
         </a>
-         <div className="navi">
+        <div className="navi">
           <ul className="list">
             <li className="nav-item py-2">
               <a className="nav-link active" aria-current="page" href="/houses">Houses</a>

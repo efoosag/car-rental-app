@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
 import {
   selectAllRents,
   getRentsError,
   getRentsStatus,
   fetchRents,
 } from "../../store/rentsSlice";
-import { useEffect } from "react";
 import Rent from "./Rent";
 import "./RentsShow.css";
 
@@ -29,7 +29,7 @@ const RentsShow = () => {
   if (rentsStatus === "loading") {
     content = <p>"Loading..."</p>;
   } else if (rentsStatus === "succeeded") {
-    content = rents.map((rent, index) => <Rent key={index} rent={rent} />);
+    content = rents.map((rent) => <Rent key={rent.id} rent={rent} />);
   } else if (rentsStatus === "failed") {
     content = <p>{rentsError}</p>;
   }
