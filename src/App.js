@@ -1,12 +1,14 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Login from './components/Login';
-import Signup from './components/Signup';
-import Cars from './components/Car/Cars';
-import './App.css';
-import AddCar from './components/Car/carForm/carForm';
+import React from "react";
+import { useSelector } from "react-redux";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import Cars from "./components/Car/Cars";
+import "./App.css";
+import AddCar from "./components/Car/carForm/carForm";
+import RentsShow from "./components/rents/RentsShow";
+import AddRentForm from "./components/rents/AddRentForm";
 
 function App() {
   const state = useSelector((state) => state.user);
@@ -14,9 +16,7 @@ function App() {
   return (
     <div className="nav">
       <Router>
-        <div>
-          {logIn.loggedIn ? <Navigation /> : ''}
-        </div>
+        <div>{logIn.loggedIn ? <Navigation /> : ""}</div>
         <div className="nav-wholer">
           <Routes>
             <Route path="/" element={<Login />} />
@@ -24,6 +24,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/cars" element={<Cars />} />
             <Route path="/add_car" exact element={<AddCar />} />
+            <Route path="/rentals" exact element={<RentsShow />} />
+            <Route path="/rent_form" exact element={<AddRentForm />} />
           </Routes>
         </div>
       </Router>
