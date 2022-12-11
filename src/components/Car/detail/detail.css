@@ -1,0 +1,42 @@
+.detail-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.detail-image {
+  border-radius: 5%;
+  max-width: 1000px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail {
+  max-width: 800px;
+  margin-top: 10px;
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  height: 40px;
+}
+
+tr:nth-child(odd) {
+  background-color: #adb0a486;
+}
+
+td {
+  padding: 5px;
+}
