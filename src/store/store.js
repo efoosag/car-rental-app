@@ -8,11 +8,13 @@ import thunk from "redux-thunk";
 import { userReducer } from "./userSlice";
 import rentsReducer from "./rentsSlice";
 import carReducer from './car';
+import detailReducer from "./detail";
 
 const rootReducer = combineReducers({
   user: userReducer,
   rents: rentsReducer,
   cars: carReducer,
+  detail: detailReducer,
 
 });
 
