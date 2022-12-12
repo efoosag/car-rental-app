@@ -15,8 +15,8 @@ function Navigation() {
         <div className="navi">
           <ul className="list">
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/houses">
-                Houses
+              <a className="nav-link active" aria-current="page" href="/cars">
+                Cars
               </a>
             </li>
             <li className="nav-item py-2">
@@ -56,18 +56,12 @@ function Navigation() {
               </a>
             </li>
             <li className="nav-item py-2">
-              <a
-                className="nav-link active"
-                aria-current="page"
-                href="/remove_cars"
-              >
-                Remove Car
-              </a>
+              <a className="nav-link active" aria-current="page" href="/remove_car">Remove Car</a>
             </li>
             <li className="log">
               <Link
-                to="/login"
-                className="menu-bars"
+                to="/"
+                className="menu-bars py-2 px-3"
                 onClick={() => {
                   dispatch(logout());
                 }}
@@ -77,6 +71,7 @@ function Navigation() {
             </li>
           </ul>
         </div>
+
       </div>
     </nav>
   );

@@ -53,7 +53,7 @@ const rentsSlice = createSlice({
         state.error = action.error.message;
       })
       .addCase(addNewRent.fulfilled, (state, action) => {
-        console.log(action.payload);
+        // console.log(action.payload);
         state.rents.push(action.payload);
       });
   },
