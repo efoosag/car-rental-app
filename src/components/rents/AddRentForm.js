@@ -45,7 +45,7 @@ const AddRentForm = () => {
         setNumber_of_days("");
         setLocation("");
       } catch (err) {
-        console.error("failed to save the rent", err);
+        // console.error("failed to save the rent", err);
       } finally {
         setAddRequestStatus("idle");
       }

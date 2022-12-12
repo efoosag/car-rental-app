@@ -6,18 +6,19 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { AiFillCaretLeft } from 'react-icons/ai';
 import './detail.css';
-import { getCar } from '../../../store/car';
+import { getCars } from '../../../store/detail';
 
 export default function Detail() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleReserve = (car) => {
-    dispatch(getCar(car));
-    navigate('/rent_form');
+    dispatch(getCars(car));
+    navigate('/rentals');
   };
 
   const Car = useSelector((state) => state.detail);
+
   return (
     <div className="dit">
 

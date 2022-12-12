@@ -9,6 +9,7 @@ import "./App.css";
 import AddCar from "./components/Car/carForm/carForm";
 import RentsShow from "./components/rents/RentsShow";
 import AddRentForm from "./components/rents/AddRentForm";
+import Detail from "./components/Car/detail/detail";
 
 function App() {
   const state = useSelector((state) => state.user);
@@ -26,6 +27,7 @@ function App() {
             <Route path="/add_car" exact element={<AddCar />} />
             <Route path="/rentals" exact element={<RentsShow />} />
             <Route path="/rent_form" exact element={<AddRentForm />} />
+            <Route path="/detail" exact element={<Detail />} />
           </Routes>
         </div>
       </Router>
