@@ -8,10 +8,13 @@ import Cars from './components/Car/Cars';
 import './App.css';
 import AddCar from './components/Car/carForm/carForm';
 import CarRemoveList from './components/Car/CarRemoveList';
+import RentsShow from "./components/rents/RentsShow";
+import AddRentForm from "./components/rents/AddRentForm";
+import Detail from "./components/Car/detail/detail";
 
 function App() {
   const state = useSelector((state) => state.user);
-  const logIn = JSON.parse(localStorage.getItem('user')) || state;
+  const logIn = JSON.parse(localStorage.getItem("user")) || state;
   return (
     <div className="nav">
       <Router>
@@ -26,11 +29,13 @@ function App() {
             <Route path="/cars" element={<Cars />} />
             <Route path="/add_car" exact element={<AddCar />} />
             <Route path="/remove_car" exact element={<CarRemoveList />} />
+            <Route path="/rentals" exact element={<RentsShow />} />
+            <Route path="/rent_form" exact element={<AddRentForm />} />
+            <Route path="/detail" exact element={<Detail />} />
           </Routes>
         </div>
       </Router>
     </div>
-
   );
 }
 
