@@ -1,19 +1,31 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { addNewRent } from "../../store/rentsSlice";
+import { getCar } from "../../store/car";
+import "./AddRentForm.css";
 
 const AddRentForm = () => {
-  // const userLoggedIn = useSelector((state) => state.user);
-  // console.log(userLoggedIn);
-
   const dispatch = useDispatch();
-  // const state = useSelector((state) => state.user);
-  // const { userId } = state;
-  // console.log(userId);
+
+  // Retrieve the cars from the state
+  const retrieveCars = () => {
+    dispatch(getCar());
+  };
+
+  const cars = useSelector((state) => state.cars);
+
+  useEffect(() => {
+    retrieveCars();
+  }, []);
+
+  const carsOptions = cars.map((car) => (
+    <option key={car.id} value={car.model}>
+      {car.model}
+    </option>
+  ));
 
   const [car_brand, setCar_brand] = useState("");
-  // const [userId, setUserId] = useState("");
   const [rent_date, setRentDate] = useState("");
   const [number_of_days, setNumber_of_days] = useState("");
   const [location, setLocation] = useState("");
@@ -24,8 +36,9 @@ const AddRentForm = () => {
   const onNumber_of_daysChanged = (e) => setNumber_of_days(e.target.value);
   const onLocationChanged = (e) => setLocation(e.target.value);
 
-  const canSave = [car_brand, rent_date, number_of_days, location].every(Boolean)
-  && addRequestStatus === "idle";
+  const canSave =
+    [car_brand, rent_date, number_of_days, location].every(Boolean) &&
+    addRequestStatus === "idle";
 
   const onCreateRent = () => {
     if (canSave) {
@@ -37,7 +50,7 @@ const AddRentForm = () => {
             rent_date,
             number_of_days,
             location,
-          }),
+          })
         ).unwrap();
 
         setCar_brand("");
@@ -53,67 +66,67 @@ const AddRentForm = () => {
   };
 
   return (
-    <section>
-      <h2> Make a New Car Rent</h2>
+    <section className="rent_form">
+      <h2> Make Car Rent</h2>
 
       <form>
-        <label htmlFor="car_brand">
-          {" "}
-          Car Brand
-          <input
-            type="text"
-            id="car_brand"
-            name="car_brand"
-            value={car_brand}
-            onChange={onCar_brandChanged}
-          />
-        </label>
+        <div>
+          <label htmlFor="car_brand">
+            {" "}
+            Car Brand
+            <select
+              id="car_brand"
+              name="car_brand"
+              value={car_brand}
+              onChange={onCar_brandChanged}
+            >
+              <option>Select a car model</option>
+              {carsOptions}
+            </select>
+          </label>
+        </div>
 
-        {/* <label htmlFor="car_brand"> Car Brand</label>
-        <input
-          type="text"
-          id="car_brand"
-          name="userId"
-          value={user.id}
-          onChange={onCar_brandChanged}
-        /> */}
+        <div>
+          <label htmlFor="rentDate">
+            {" "}
+            Date
+            <input
+              type="date"
+              id="rentDate"
+              name="rentDate"
+              value={rent_date}
+              placeholder="When to Pick up Rented Car?"
+              onChange={onRentDateChanged}
+            />
+          </label>
+        </div>
+        <div>
+          <label htmlFor="number_of_days">
+            Days
+            <input
+              type="number"
+              id="number_of_days"
+              name="number_of_days"
+              value={number_of_days}
+              placeholder="How Long To have the Rented Car?"
+              onChange={onNumber_of_daysChanged}
+            />
+          </label>
+        </div>
 
-        <label htmlFor="rentDate">
-          {" "}
-          Date
-          <input
-            type="date"
-            id="rentDate"
-            name="rentDate"
-            value={rent_date}
-            placeholder="When to Pick up Rented Car?"
-            onChange={onRentDateChanged}
-          />
-        </label>
-
-        <label htmlFor="number_of_days">
-          Days
-          <input
-            type="number"
-            id="number_of_days"
-            name="number_of_days"
-            value={number_of_days}
-            placeholder="How Long To have the Rented Car?"
-            onChange={onNumber_of_daysChanged}
-          />
-        </label>
-
-        <label htmlFor="location">
-          Location
-          <input
-            type="text"
-            id="location"
-            name="location"
-            value={location}
-            placeholder="Where to have the Rented Car?"
-            onChange={onLocationChanged}
-          />
-        </label>
+        <div>
+          <label htmlFor="location">
+            Location
+            <input
+              type="text"
+              id="location"
+              name="location"
+              value={location}
+              placeholder="Where to have the Rented Car?"
+              onChange={onLocationChanged}
+            />
+          </label>
+        </div>
         <button type="button" onClick={onCreateRent}>
           Rent Car
         </button>

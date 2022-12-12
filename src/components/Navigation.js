@@ -15,8 +15,8 @@ function Navigation() {
         <div className="navi">
           <ul className="list">
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/houses">
-                Houses
+              <a className="nav-link active" aria-current="page" href="/cars">
+                Cars
               </a>
             </li>
             <li className="nav-item py-2">

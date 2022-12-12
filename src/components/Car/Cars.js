@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getCar } from '../../store/car';
-import Car from './Car';
-import './Cars.css';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getCar } from "../../store/car";
+import Car from "./Car";
+import "./Cars.css";
 
 function Cars() {
   const dispatch = useDispatch();
@@ -12,6 +12,7 @@ function Cars() {
     dispatch(getCar());
   };
   const cars = useSelector((state) => state.cars);
+
   useEffect(() => {
     retrieveCars();
   }, []);
@@ -23,9 +24,9 @@ function Cars() {
         <p className="car-paragraph">Please select a Cars</p>
         <p className="dashes">----------------------------</p>
       </div>
-      {
-        cars?.map((car) => (<Car key={car.id} car={car} />))
-      }
+      {cars?.map((car) => (
+        <Car key={car.id} car={car} />
+      ))}
     </div>
   );
 }
