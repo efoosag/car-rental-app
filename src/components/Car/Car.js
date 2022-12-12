@@ -25,7 +25,7 @@ function Car({ car }) {
         </Link>
         <h4 className="car-title">{model}</h4>
         <p className="car-feature">{feature}</p>
-        <h3 className="car-name">{name}</h3>
+        <h3 className="car-name" style={{ color: '#fd7e14' }}>{name}</h3>
       </div>
     </>
 
