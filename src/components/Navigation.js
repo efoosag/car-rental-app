@@ -47,7 +47,6 @@ function Navigation() {
               </a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/remove_car">Remove Car</a>
               <a
                 className="nav-link active"
                 aria-current="page"
@@ -57,7 +56,7 @@ function Navigation() {
               </a>
             </li>
             <li className="nav-item py-2">
-              <a className="nav-link active" aria-current="page" href="/remove_cars">Remove Car</a>
+              <a className="nav-link active" aria-current="page" href="/remove_car">Remove Car</a>
             </li>
             <li className="log">
               <Link
