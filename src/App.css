@@ -19,13 +19,12 @@
     display: flex;
     flex-direction: column;
   }
-  
+
   .nav-dir {
     width: 100%;
   }
-  
+
   .nav-wholer {
-    width: 100%;    
+    width: 100%;
   }
-  
 }

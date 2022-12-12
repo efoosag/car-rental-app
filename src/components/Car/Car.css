@@ -2,9 +2,9 @@
   max-width: 500px;
 }
 
-.car-box {  
+.car-box {
   display: flex;
-  flex-direction: column;  
-  width: 33%; 
-  margin: 20px;     
+  flex-direction: column;
+  width: 33%;
+  margin: 20px;
 }

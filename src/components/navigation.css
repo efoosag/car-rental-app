@@ -50,19 +50,19 @@ a {
   background-color: #fff;
 }
 
-.nav-item {  
+.nav-item {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 600;
 }
 
 .nav-link {
   font-size: 20px;
-  color: rgb(58, 56, 56);  
+  color: rgb(58, 56, 56);
 }
 
 .list {
   list-style: none;
- }
+}
 
 .nav-link:hover {
   background-color: #fd7e14;
@@ -75,9 +75,9 @@ a {
 
 .menu-bars {
   margin-top: 50px;
-  font-size: 20px;  
+  font-size: 20px;
   color: #fd7e14;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
 
 .log {
