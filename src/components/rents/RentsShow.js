@@ -37,7 +37,6 @@ const RentsShow = () => {
   return (
     <section className="section">
       <h2>Car Rents</h2>
-      <AddRentForm />
       {content}
     </section>
   );
