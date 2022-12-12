@@ -1,6 +1,7 @@
 const url = 'http://localhost:3000/api/v1';
 const GET_CARS = 'GET_CARS';
 const POST_CARS = 'POST_CAR';
+const DELETE_CAR = 'DELETE_CAR';
 
 const initialState = [];
 
@@ -10,6 +11,8 @@ const carReducer = (state = initialState, { type, payload }) => {
     return payload;
   case POST_CARS:
     return [...state, payload];
+  case DELETE_CAR:
+    return payload;
   default:
     return state;
   }
@@ -46,5 +49,16 @@ export const saveCar = (car) => async (dispatch) => {
   dispatch({
     type: POST_CARS,
     payload: car,
+  });
+};
+
+export const deleteCar = (id) => async (dispatch) => {
+  await fetch(`${url}/cars/${id}`,
+    {
+      method: 'DELETE',
+    });
+
+  dispatch({
+    type: DELETE_CAR,
   });
 };

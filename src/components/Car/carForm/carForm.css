@@ -3,7 +3,7 @@
   max-width: 800px;
   width: 90%;
   padding: 30px;
-  background-color: #98bf0c;
+  background-color: #fd7e14;
   border-radius: 20px;
 }
 
@@ -32,6 +32,6 @@ button {
   height: 40px;
   border: none;
   border-radius: 10px;
-  color: #637c07;
+  color: #fd7e14;
   font-size: 18px;
 }

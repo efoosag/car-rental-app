@@ -3,7 +3,28 @@
   width: 100vw;
 }
 
-.nav-wholer {
-  width: 100%;
+.nav-dir {
+  width: 20%;
   display: flex;
+}
+
+.nav-wholer {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-dir {
+    width: 100%;
+  }
+
+  .nav-wholer {
+    width: 100%;
+  }
 }
