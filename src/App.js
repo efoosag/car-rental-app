@@ -12,7 +12,7 @@ import RentsShow from "./components/rents/RentsShow";
 import AddRentForm from "./components/rents/AddRentForm";
 import Detail from "./components/Car/detail/detail";
 
-function App() {
+const App = () => {
   const state = useSelector((state) => state.user);
   const logIn = JSON.parse(localStorage.getItem("user")) || state;
   return (
@@ -37,6 +37,6 @@ function App() {
       </Router>
     </div>
   );
-}
+};
 
 export default App;

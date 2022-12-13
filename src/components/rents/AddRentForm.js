@@ -17,6 +17,7 @@ const AddRentForm = () => {
 
   useEffect(() => {
     retrieveCars();
+    // eslint-disable-next-line
   }, []);
 
   const carsOptions = cars.map((car) => (
@@ -65,10 +66,10 @@ const AddRentForm = () => {
   };
 
   return (
-    <section className="rent_form">
+    <section className="add-car-box">
       <h2> Make Car Rent</h2>
 
-      <form>
+      <form className="forms">
         <div>
           <label htmlFor="car_brand">
             {" "}

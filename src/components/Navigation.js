@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { logout } from "../store/userSlice";
 import "./navigation.css";
 
-function Navigation() {
+const Navigation = () => {
   const dispatch = useDispatch();
   return (
     <nav>
@@ -75,6 +75,6 @@ function Navigation() {
       </div>
     </nav>
   );
-}
+};
 
 export default Navigation;

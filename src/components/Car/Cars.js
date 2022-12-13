@@ -5,7 +5,7 @@ import { getCar } from "../../store/car";
 import Car from "./Car";
 import "./Cars.css";
 
-function Cars() {
+const Cars = () => {
   const dispatch = useDispatch();
 
   const retrieveCars = () => {
@@ -33,6 +33,6 @@ function Cars() {
 
     </div>
   );
-}
+};
 
 export default Cars;

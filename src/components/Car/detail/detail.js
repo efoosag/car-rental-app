@@ -8,7 +8,7 @@ import { AiFillCaretLeft } from 'react-icons/ai';
 import './detail.css';
 import { getCars } from '../../../store/detail';
 
-export default function Detail() {
+const Detail = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -54,4 +54,6 @@ export default function Detail() {
       </div>
     </div>
   );
-}
+};
+
+export default Detail;

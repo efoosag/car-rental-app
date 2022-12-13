@@ -7,7 +7,7 @@ import { PropTypes } from 'prop-types';
 import { getCars } from '../../store/detail';
 import './Car.css';
 
-function Car({ car }) {
+const Car = ({ car }) => {
   const dispatch = useDispatch();
   const handleCarDetails = () => {
     dispatch(getCars(car));
@@ -30,7 +30,7 @@ function Car({ car }) {
     </>
 
   );
-}
+};
 
 Car.propTypes = {
   car: PropTypes.instanceOf(Object).isRequired,
