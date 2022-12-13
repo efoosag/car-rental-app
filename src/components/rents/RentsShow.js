@@ -9,14 +9,12 @@ import {
 import Rent from "./Rent";
 import "./RentsShow.css";
 
-
 const RentsShow = () => {
   const dispatch = useDispatch();
 
   const rents = useSelector(selectAllRents);
   const rentsStatus = useSelector(getRentsStatus);
   const rentsError = useSelector(getRentsError);
-  // console.log(rents)
 
   useEffect(() => {
     if (rentsStatus === "idle") {
