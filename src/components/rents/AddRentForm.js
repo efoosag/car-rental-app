@@ -36,9 +36,8 @@ const AddRentForm = () => {
   const onNumber_of_daysChanged = (e) => setNumber_of_days(e.target.value);
   const onLocationChanged = (e) => setLocation(e.target.value);
 
-  const canSave =
-    [car_brand, rent_date, number_of_days, location].every(Boolean) &&
-    addRequestStatus === "idle";
+  const canSave = [car_brand, rent_date, number_of_days, location].every(Boolean)
+    && addRequestStatus === "idle";
 
   const onCreateRent = () => {
     if (canSave) {
@@ -50,7 +49,7 @@ const AddRentForm = () => {
             rent_date,
             number_of_days,
             location,
-          })
+          }),
         ).unwrap();
 
         setCar_brand("");

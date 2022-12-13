@@ -31,7 +31,6 @@ function Cars() {
         }
       </div>
 
-
     </div>
   );
 }

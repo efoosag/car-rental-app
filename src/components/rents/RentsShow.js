@@ -9,7 +9,6 @@ import {
 import Rent from "./Rent";
 import "./RentsShow.css";
 
-import AddRentForm from "./AddRentForm";
 
 const RentsShow = () => {
   const dispatch = useDispatch();
