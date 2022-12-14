@@ -67,66 +67,51 @@ const AddRentForm = () => {
 
   return (
     <section className="add-car-box">
-      <h2> Make Car Rent</h2>
+      <h3 className=""> MAKE CAR RENT</h3>
 
       <form className="forms">
-        <div>
-          <label htmlFor="car_brand">
-            {" "}
-            Car Brand
-            <select
-              id="car_brand"
-              name="car_brand"
-              value={car_brand}
-              onChange={onCar_brandChanged}
-            >
-              <option>Select a car model</option>
-              {carsOptions}
-            </select>
-          </label>
-        </div>
 
-        <div>
-          <label htmlFor="rentDate">
-            {" "}
-            Date
-            <input
-              type="date"
-              id="rentDate"
-              name="rentDate"
-              value={rent_date}
-              placeholder="When to Pick up Rented Car?"
-              onChange={onRentDateChanged}
-            />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="number_of_days">
-            Days
-            <input
-              type="number"
-              id="number_of_days"
-              name="number_of_days"
-              value={number_of_days}
-              placeholder="How Long To have the Rented Car?"
-              onChange={onNumber_of_daysChanged}
-            />
-          </label>
-        </div>
+        <select
+          id="car_brand"
+          className="p-2"
+          name="car_brand"
+          value={car_brand}
+          onChange={onCar_brandChanged}
+        >
+          <option>Select a car model</option>
+          {carsOptions}
+        </select>
 
-        <div>
-          <label htmlFor="location">
-            Location
-            <input
-              type="text"
-              id="location"
-              name="location"
-              value={location}
-              placeholder="Where to have the Rented Car?"
-              onChange={onLocationChanged}
-            />
-          </label>
-        </div>
+        <input
+          type="date"
+          id="rentDate"
+          className="ps-2"
+          name="rentDate"
+          value={rent_date}
+          placeholder="When to Pick up Rented Car?"
+          onChange={onRentDateChanged}
+        />
+
+        <input
+          type="number"
+          id="number_of_days"
+          className="ps-2"
+          name="number_of_days"
+          value={number_of_days}
+          placeholder="How Long To have the Rented Car?"
+          onChange={onNumber_of_daysChanged}
+        />
+
+        <input
+          type="text"
+          id="location"
+          className="ps-2"
+          name="location"
+          value={location}
+          placeholder="Where to have the Rented Car?"
+          onChange={onLocationChanged}
+        />
+
         <button type="button" onClick={onCreateRent}>
           Rent Car
         </button>
