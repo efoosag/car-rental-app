@@ -1,5 +1,5 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable react-hooks/exhaustive-deps */
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom';
@@ -42,9 +42,7 @@ const Cars = () => {
             }}
             type="button"
             className="back-button"
-          >
-            <FontAwesomeIcon icon="fa-solid fa-caret-left" />
-          </button>
+          />
         </div>
         <ul className="car-ul">
           {nextCars.map((car) => (
@@ -79,9 +77,7 @@ const Cars = () => {
             }}
             type="button"
             className="next-button"
-          >
-            <FontAwesomeIcon icon="fa-solid fa-caret-right" />
-          </button>
+          />
         </div>
       </div>
     </div>

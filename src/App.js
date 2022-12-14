@@ -16,7 +16,7 @@ const App = () => {
   const state = useSelector((state) => state.user);
   const logIn = JSON.parse(localStorage.getItem("user")) || state;
   return (
-    <div className="nav">
+    <div className="nav-con">
       <Router>
         <div className="nav-dir">
           {logIn.loggedIn === true && <Navigation />}
