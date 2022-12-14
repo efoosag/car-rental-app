@@ -4,12 +4,12 @@
 }
 
 .nav-dir {
-  min-width: 20%;
+  width: 20%;
   display: flex;
 }
 
 .nav-wholer {
-  min-width: 70%;
+  width: 80%;
   display: flex;
   justify-content: center;
 }

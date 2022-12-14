@@ -84,12 +84,12 @@
 
 .model-name {
   margin-top: 1.2rem;
-  font-size: 1rem;
-  color: rgb(20, 20, 20);
+  font-size: 3rem;
+  color: #fd7e14;
   font-weight: 700;
 }
 
-.lambo-info {
+.car-info {
   margin-top: 0.8rem;
   color: rgb(167, 167, 167);
   margin-bottom: 0.8rem;
@@ -158,10 +158,11 @@
 
 .car-ul {
   display: flex;
-  gap: 15rem;
+  gap: 10rem;
+  justify-content: center;
 }
 
-.to-deatils-link {
+.link-to-details {
   text-decoration: none;
 }
 
@@ -203,6 +204,7 @@
   .car-ul {
     display: flex;
     flex-direction: column;
-    gap: 15rem;
+    align-items: center;
+    gap: 2rem;
   }
 }

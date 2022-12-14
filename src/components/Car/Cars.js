@@ -28,8 +28,8 @@ const Cars = () => {
   const classNaming = chooseName();
   return (
     <div className="main">
-      <h1>LATEST MODELS</h1>
-      <p className="choose">Please select a Lambo Model</p>
+      <h1>LATEST CARS</h1>
+      <p className="choose">Please select a car</p>
 
       <div className="middle">
         <div className="left">
@@ -37,7 +37,7 @@ const Cars = () => {
             onClick={() => {
               setRight(false);
               if (initial > 0) {
-                setInitial(initial - 3);
+                setInitial(initial - 2);
               }
             }}
             type="button"
@@ -51,7 +51,7 @@ const Cars = () => {
             <div className={classNaming} key={car.id}>
               <Link
                 to="/detail"
-                className="to-deatils-link"
+                className="link-to-details"
                 onClick={() => {
                   dispatch(getCars(car));
                 }}
@@ -60,8 +60,8 @@ const Cars = () => {
                   <img className="lambo" src={car.photo} alt={car.model} />
                 </div>
                 <h3 className="model-name">{car.name}</h3>
-                <p className="model-name">{car.model}</p>
-                <p className="lambo-info">{car.feature}</p>
+                <h3 className="car-info">{car.model}</h3>
+                <h3 className="car-info">{car.feature}</h3>
 
               </Link>
 

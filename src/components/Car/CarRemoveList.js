@@ -22,13 +22,13 @@ const CarRemoveList = () => {
     <div className="main">
       <h1>Remove cars from list</h1>
 
-      <div className="res-contain remove-container">
+      <div className="res-contain remove-container mt-4">
         <table className="table table-striped">
           <thead className="thead-dark">
             <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Model</th>
-              <th scope="col">Action</th>
+              <th scope="col" className="contain">Name</th>
+              <th scope="col" className="contain">Model</th>
+              <th scope="col" className="contain">Action</th>
             </tr>
           </thead>
           <tbody>

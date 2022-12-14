@@ -21,8 +21,12 @@ const Detail = () => {
 
   return (
     <div className="dit">
-
-      <h1>{Car.name}</h1>
+      <div className="d-flex justify-content-around w-100">
+        <Link to="/cars" className="prev">
+          <AiFillCaretLeft className="back-arrow" />
+        </Link>
+        <h1>{Car.name}</h1>
+      </div>
       <div className="detail-container">
         <img className="detail-image" src={Car.photo} alt={Car.name} />
         <div className="detail-about" />
@@ -47,10 +51,7 @@ const Detail = () => {
         </tbody>
       </table>
       <div className="buttons">
-        <button buttontype="reserve" onClick={() => handleReserve(Car)}>Reserve</button>
-        <Link to="/" className="prev">
-          <AiFillCaretLeft className="back-arrow" />
-        </Link>
+        <button buttontype="reserve" className="reserve px-4" onClick={() => handleReserve(Car)}>RESERVE</button>
       </div>
     </div>
   );
