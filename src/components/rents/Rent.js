@@ -2,30 +2,7 @@ import React from "react";
 import './Rent.css';
 
 const Rent = ({ rent }) => (
-  // <article className="rent">
-  //   <span>Car Brand</span>
-  //   {' '}
-  //   <h3>
-  //     {' '}
-  //     {rent.car_brand}
-  //   </h3>
-  //   <span>Collection Date</span>
-  //   {' '}
-  //   <p>
-  //     {' '}
-  //     {rent.rent_date}
-  //   </p>
-  //   <span>Number of Days</span>
-  //   <p>
-  //     {' '}
-  //     {rent.number_of_days}
-  //   </p>
-  //   <span>City/Location</span>
-  //   <p>
-  //     {' '}
-  //     {rent.location}
-  //   </p>
-  // </article>
+
   <div className="res-contain remove-container">
     <table className="table table-striped">
       <thead className="thead-dark">
