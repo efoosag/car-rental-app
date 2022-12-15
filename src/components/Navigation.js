@@ -46,15 +46,15 @@ function Navigation() {
                 Show Rents
               </a>
             </li>
-            {/* <li className="nav-item py-2">
+            <li className="nav-item py-2">
               <a
                 className="nav-link active"
                 aria-current="page"
-                href="/fovaurvite_car"
+                href="/favourite_cars"
               >
                 My Favourite
               </a>
-            </li> */}
+            </li>
             <li className="nav-item py-2">
               <a className="nav-link active" aria-current="page" href="/remove_car">Remove Car</a>
             </li>
