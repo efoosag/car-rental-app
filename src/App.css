@@ -4,14 +4,13 @@
   width: 100vw;
 }
 
-.nav-dir {  
+.nav-dir {
   display: flex;
 }
 
 .nav-wholer {
   display: flex;
   justify-content: center;
- 
 }
 
 @media screen and (max-width: 480px) {

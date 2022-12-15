@@ -23,6 +23,7 @@
   justify-content: center;
   background-color: #fd7e14;
 }
+
 .reserve {
   background-color: #fd7e14;
   color: #fff;
@@ -57,19 +58,17 @@ td {
 }
 
 @media screen and (max-width: 480px) {
-  .detail-image {    
+  .detail-image {
     width: 80%;
     margin: 0 auto;
   }
 
   .detail {
     display: none;
-    
   }
 
   .buttons {
     margin-bottom: 0;
-    width: 100%;     
+    width: 100%;
   }
-  
 }

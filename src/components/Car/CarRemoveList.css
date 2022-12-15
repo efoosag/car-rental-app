@@ -1,19 +1,21 @@
-.table-striped>thead>tr>th {
-    background-color: #fd7e14;
-    padding: 0 5rem;
+
+.table-striped > tbody > tr:nth-child(even),
+th {
+  background-color: #fd7e14;
 }
 
-.table-striped>tbody>tr:nth-child(even), th {
-    background-color: #fd7e14;
+.table-striped > tbody > tr:nth-child(odd),
+th {
+  background-color: #fff;
 }
 
-.table-striped>tbody>tr:nth-child(odd), th {
-    background-color: #fff;    
+.table-striped > thead > tr > th {
+  background-color: #fd7e14;
+  padding: 0 5rem;
 }
 
 @media screen and (max-width: 480px) {
-  .table-striped>thead>tr>th {    
+  .table-striped > thead > tr > th {
     padding: 0 1rem;
-}
-
+  }
 }
