@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { signinDetails } from '../store/userSlice';
 import './Login.css';
 
-function Login() {
+const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const state = useSelector((state) => state.user);
@@ -99,6 +99,6 @@ function Login() {
 
     </>
   );
-}
+};
 
 export default Login;

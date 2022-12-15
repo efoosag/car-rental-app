@@ -1,44 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
+.add-car-box {
+  margin: 80px 10%;
+  max-width: 800px;
+  width: 90%;
+  padding: 30px;
+  background-color: #fd7e14;
+  border-radius: 20px;
 }
 
-.rent_form {
+.forms {
+  width: 60%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  background-color: #98bf0c;
-  width: 80%;
-  height: auto;
-}
-
-.rent_form h2 {
-  font-size: 3em;
-  text-align: center;
-  font-weight: 700;
-  padding: 45px;
-}
-
-label {
-  font-size: 34px;
-  font-weight: 500;
-  text-align: left;
-  margin-left: 5%;
-}
-
-input {
-  color: rgb(146, 144, 144);
-  width: 40%;
-  font: inherit;
-  margin-left: 50px;
-  margin-bottom: 30px;
-  padding: 0.2em 0.5em;
-  align-self: center;
-}
-
-button {
-  width: 20%;
-  height: auto;
-  padding: 20px;
-  font-size: 35px;
-  margin-left: 35%;
+  gap: 1rem;
+  border-radius: 10px;
 }

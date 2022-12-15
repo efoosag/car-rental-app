@@ -56,10 +56,10 @@ const AddCar = () => {
       <div className="add-car-box">
         <h3 className="">ADD NEW CAR</h3>
         <form className="forms">
-          <input type="text" name="name" label="car name" onChange={handleChange} value={name} required placeholder="name" />
-          <input type="text" name="model" label="model" onChange={handleChange} value={model} required placeholder="model" />
-          <input type="text" name="feature" label="feature" onChange={handleChange} value={feature} required placeholder="feature" />
-          <input type="url" name="photo" label="photo" onChange={handleChange} value={photo} required placeholder="Add Link to Car photo" />
+          <input type="text" name="name" className="ps-2" label="car name" onChange={handleChange} value={name} required placeholder="name" />
+          <input type="text" name="model" className="ps-2" label="model" onChange={handleChange} value={model} required placeholder="model" />
+          <input type="text" name="feature" className="ps-2" label="feature" onChange={handleChange} value={feature} required placeholder="feature" />
+          <input type="url" name="photo" className="ps-2" label="photo" onChange={handleChange} value={photo} required placeholder="Add Link to Car photo" />
           <button type="submit" onClick={submitCar}>SUBMIT</button>
         </form>
       </div>

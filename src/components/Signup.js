@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { signUpDetails } from '../store/userSlice';
 
-function Signup() {
+const Signup = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const state = useSelector((state) => state.user);
@@ -96,6 +96,6 @@ function Signup() {
       </div>
     </>
   );
-}
+};
 
 export default Signup;

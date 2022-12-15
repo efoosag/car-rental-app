@@ -5,8 +5,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { getCar, deleteCar } from '../../store/car';
+import './CarRemoveList.css';
 
-function CarRemoveList() {
+const CarRemoveList = () => {
   const dispatch = useDispatch();
   const retrieveCars = () => {
     dispatch(getCar());
@@ -21,13 +22,13 @@ function CarRemoveList() {
     <div className="main">
       <h1>Remove cars from list</h1>
 
-      <div className="res-contain remove-container">
-        <table className="table">
+      <div className="res-contain remove-container mt-4">
+        <table className="table table-striped">
           <thead className="thead-dark">
             <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Model</th>
-              <th scope="col">Action</th>
+              <th scope="col" className="contain">Name</th>
+              <th scope="col" className="contain">Model</th>
+              <th scope="col" className="contain">Action</th>
             </tr>
           </thead>
           <tbody>
@@ -37,13 +38,13 @@ function CarRemoveList() {
                 <td>{car.model}</td>
                 <th scope="col">
                   <button
-                    className="remove-btn"
+                    className="remove-btn px-3"
                     type="submit"
                     onClick={() => dispatch(deleteCar(car.id))(
                       window.location.reload(false),
                     )}
                   >
-                    <FontAwesomeIcon icon={faTrash} className="trashcan" />
+                    <FontAwesomeIcon icon={faTrash} className="trashcan px-2" />
                     remove
                   </button>
                 </th>
@@ -55,6 +56,6 @@ function CarRemoveList() {
     </div>
 
   );
-}
+};
 
 export default CarRemoveList;
