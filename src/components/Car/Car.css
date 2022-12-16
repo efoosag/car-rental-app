@@ -1,0 +1,10 @@
+.car-image {
+  max-width: 500px;
+}
+
+.car-box {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  margin: 20px;
+}
